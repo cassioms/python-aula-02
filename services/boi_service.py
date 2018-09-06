@@ -15,6 +15,7 @@ class BoiService:
 
     def connected(self, funcao, *args):
         with sqlite3.connect('bois.db') as conn:
+            conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             retorno_funcao = funcao(conn, cursor, *args)
             cursor.close()

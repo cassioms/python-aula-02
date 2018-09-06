@@ -1,9 +1,9 @@
 class Boi:
 
     def __init__(self, boi):
-        self.id = boi[0]
-        self.nome = boi[1]
-        self.peso = boi[2]
+        self.id = boi['id']
+        self.nome = boi['nome']
+        self.peso = boi['peso']
 
 
     def __gt__(self, outro):
